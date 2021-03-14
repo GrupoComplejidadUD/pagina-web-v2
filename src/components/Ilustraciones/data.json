@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Proyectos de Investigación",
+    "path": "#",
+    "content": "Nuestros estudiantes, asociados y profesores, cuentan con un espacio en el que el trabajo colaborativo y la experiencia son unas de las muchas herramientas que tienen a disposición para sus proyectos",
+    "ilustracion": "proyectos.svg"
+  },
+  {
+    "title": "Eventos Académicos",
+    "path": "#",
+    "content": "Cada semestre, el grupo cuenta con una serie de Seminarios y Charlas en las que aprenderás sobre las Ciencias de la Complejidad de la mano de expertos.",
+    "ilustracion": "eventos.svg"
+  },
+  {
+    "title": "Aprende con Nosotros",
+    "path": "#",
+    "content": "Aprende junto a nuestros tutores del grupo, toda la teoría básica para sumergirte en este fantástico mundo de las Ciencias Complejas.",
+    "ilustracion": "aprende.svg"
+  }
+]

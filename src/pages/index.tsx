@@ -1,5 +1,6 @@
 import AppTitle from "@Components/Layout/AppTitle";
 import HomeCover from "@Components/Cover/HomeCover";
+import Ilustraciones from "@Components/Ilustraciones";
 import Aliados from "@Components/Aliados";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <>
       <AppTitle>Home</AppTitle>
       <HomeCover />
+      <Ilustraciones />
       <Aliados />
     </>
   );
