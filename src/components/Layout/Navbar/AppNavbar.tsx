@@ -7,6 +7,7 @@ import { useScroll } from "@Hooks/useScroll";
 
 import Link from "next/link";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { FaBars } from "react-icons/fa";
 
 import styles from "./AppNavbar.module.scss";
 
@@ -38,7 +39,9 @@ export default function AppNavbar() {
       <Navbar.Toggle
         className={styles.toggler}
         aria-controls="navbarNavDropdown"
-      />
+      >
+        <FaBars />
+      </Navbar.Toggle>
       <Navbar.Collapse id="navbarNavDropdown">
         <Nav className={cn("ml-auto", styles.nav)}>
           {navbarMenu.map((item) => {

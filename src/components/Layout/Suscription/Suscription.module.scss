@@ -20,6 +20,7 @@
 
   .suscriptionInput {
     padding: 0.7rem 5rem 0.7rem 0.75rem;
+    width: 100% !important;
     height: auto;
 
     &:focus {
@@ -52,9 +53,10 @@
       opacity: 1;
     }
 
-    &[disabled] {
-      background-color: $muted;
-      border-color: $muted;
+    &[disabled],
+    &[disabled]:hover {
+      background-color: $muted !important;
+      border-color: $muted !important;
       cursor: not-allowed !important;
     }
   }
