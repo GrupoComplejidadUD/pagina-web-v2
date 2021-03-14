@@ -1,0 +1,46 @@
+{
+  "name": "ComplexUD",
+  "title": "Grupo de Investigación ComplexUD",
+  "description": "Página Web del Grupo de Investigación Complexud de la Universidad Distrital",
+  "keywords": [
+    "Complexud",
+    "Complejidad",
+    "Sistemas complejos",
+    "Fractales",
+    "Grupo de Investigación"
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/Grupo-de-Complejidad-de-la-Universidad-Distrital-567936853231644",
+    "twitter": "https://twitter.com/complejidadud",
+    "github": "https://github.com/GrupoComplejidadUD",
+    "youtube": "https://www.youtube.com/channel/UCwMNplUJd2iBbNArsSeRsIQ",
+    "email": "complejidad@udistrital.edu.co"
+  },
+  "aliados": [
+    {
+      "name": "C3",
+      "url": "https://www.c3.unam.mx/",
+      "img": "C3.png"
+    },
+    {
+      "name": "Universidad del Bosque",
+      "url": "https://www.unbosque.edu.co/",
+      "img": "UEBosque.png"
+    },
+    {
+      "name": "Universidad Nacional",
+      "url": "http://ciencias.bogota.unal.edu.co/gruposdeinvestigacion/caos-y-complejidad/",
+      "img": "un.png"
+    },
+    {
+      "name": "Universidad Pontificia Javeriana",
+      "url": "https://ingenieria.javeriana.edu.co/investigacion/instituto/nanotecnologia",
+      "img": "Javeriana.png"
+    },
+    {
+      "name": "Universidad del Rosario",
+      "url": "https://www.urosario.edu.co/",
+      "img": "URosario.png"
+    }
+  ]
+}
