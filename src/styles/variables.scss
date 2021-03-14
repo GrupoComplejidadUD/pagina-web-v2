@@ -1,0 +1,45 @@
+// Colors
+$primary: #4a688c;
+$primary-light: #627d9d;
+$primary-lighten: #a4b6cb;
+$primary-dark: #2c4c72;
+$primary-darken: #133053;
+
+$secondary: #77b62b;
+$secondary-light: #8cd039;
+$secondary-dark: #679d25;
+
+$yellow: #fab442;
+$yellow-light: #fbc36a;
+$yellow-dark: #f9a824;
+
+$red: #f20d0d;
+$red-light: #f43434;
+$red-dark: #cb0b0b;
+
+$white: #fff;
+$black: #111;
+$muted: #ccc;
+
+$gradiant: linear-gradient(#ffffff, #eef1f4);
+$shadow: 0px 4px 6px #2c4b7299;
+$not-shadow: 0px 0px 0px #0000;
+
+// Fonts
+$font-primary: "OpenSans", sans-serif;
+$font-titles: "Roboto", sans-serif;
+$font-body: "OpenSans", sans-serif;
+
+$font-size: 16px;
+
+// Responsive Layout
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$brand-height: 54px;
+$brand-font-size: 24px;
+$brand-height-index: 84px;
+$brand-font-size-index: 36px;
+$navbar-gradiant-index: linear-gradient(#000c, #0000);

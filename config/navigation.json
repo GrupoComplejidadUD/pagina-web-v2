@@ -1,0 +1,65 @@
+{
+  "navbar": [
+    {
+      "label": "Conócenos",
+      "subMenu": [
+        { "label": "Misión y Visión", "path": "#" },
+        { "label": "Historia", "path": "#" },
+        { "label": "Objetivos", "path": "#" }
+      ]
+    },
+    {
+      "label": "Investigación",
+      "subMenu": [
+        { "label": "Investigadores", "path": "#" },
+        {
+          "label": "Lineas de Investigación",
+          "path": "#"
+        },
+        { "label": "Publicaciones", "path": "#" },
+        { "label": "Productividad", "path": "#" }
+      ]
+    },
+    {
+      "label": "Eventos",
+      "subMenu": [
+        { "label": "Seminarios", "path": "#" },
+        { "label": "Sustentaciones", "path": "#" }
+      ]
+    },
+    {
+      "label": "Convocatorias",
+      "path": "#"
+    }
+  ],
+  "footer": [
+    {
+      "label": "Conócenos",
+      "subMenu": [
+        { "label": "Mision", "path": "#" },
+        { "label": "Vision", "path": "#" },
+        { "label": "Historia", "path": "#" },
+        { "label": "Objetivos", "path": "#" }
+      ]
+    },
+    {
+      "label": "Investigación",
+      "subMenu": [
+        { "label": "Investigadores", "path": "#" },
+        {
+          "label": "Lineas de Investigación",
+          "path": "#"
+        },
+        { "label": "Publicaciones", "path": "#" },
+        { "label": "Productividad", "path": "#" }
+      ]
+    },
+    {
+      "label": "Eventos",
+      "subMenu": [
+        { "label": "Seminarios", "path": "#" },
+        { "label": "Sustentaciones", "path": "#" }
+      ]
+    }
+  ]
+}
