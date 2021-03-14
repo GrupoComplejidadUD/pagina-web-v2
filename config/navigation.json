@@ -1,4 +1,8 @@
 {
+  "home": {
+    "primary": "#",
+    "secondary": "random"
+  },
   "navbar": [
     {
       "label": "Conócenos",

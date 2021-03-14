@@ -1,10 +1,11 @@
 import AppTitle from "@Components/Layout/AppTitle";
+import HomeCover from "@Components/Cover/HomeCover";
 
 export default function Home() {
   return (
     <>
       <AppTitle>Home</AppTitle>
-      <h1>Hola Mundo</h1>
+      <HomeCover />
     </>
   );
 }
