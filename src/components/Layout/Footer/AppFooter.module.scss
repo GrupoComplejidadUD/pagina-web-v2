@@ -1,0 +1,61 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+  background-color: $primary;
+  color: $white;
+  padding: 1em 0 2em 0;
+
+  .footerList {
+    li {
+      margin-top: 0.9em;
+    }
+
+    a {
+      color: $muted;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .footerIcons {
+    svg {
+      font-size: 2em;
+      color: $white;
+
+      &:hover {
+        color: $primary-darken;
+      }
+    }
+
+    a:not(:first-child) svg {
+      margin-left: 0.8em;
+    }
+  }
+
+  .footerLogos {
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+
+    @include media-lg {
+      justify-content: flex-end;
+    }
+
+    img {
+      display: block;
+      width: 100px;
+      margin-left: 10px;
+    }
+  }
+
+  .footerCopyright {
+    color: $muted;
+
+    a {
+      color: $white;
+    }
+  }
+}
