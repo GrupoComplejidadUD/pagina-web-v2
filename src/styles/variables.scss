@@ -34,7 +34,24 @@ $font-titles: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 
 // Body Styles
 $body-bg: $white;
-$body-color: #{$primary-darken};
+$body-color: $primary-darken;
+
+// Navbar light Variables
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $primary-darken;
+$navbar-light-active-color: $primary-darken;
+$navbar-light-toggler-border-color: $primary;
+
+// Dropdown variables
+$dropdown-bg: $primary;
+$dropdown-color: $body-color;
+
+$dropdown-link-color: $white;
+$dropdown-link-hover-color: $black;
+$dropdown-link-hover-bg: $primary-lighten;
+
+$dropdown-link-active-color: $primary-darken;
+$dropdown-link-active-bg: $white;
 
 // Bootstrap Required
 @import "bootstrap/scss/functions";
