@@ -1,53 +1,32 @@
 .suscription {
-  background-color: $primary-darken;
   color: $white;
   text-align: center;
 
   .suscriptionTitle {
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-bottom: 1em;
   }
 
   .suscriptionFrom {
     position: relative;
     max-width: 600px;
     margin: auto;
-    margin-bottom: 1em;
   }
 
   .suscriptionInput {
     padding: 0.7rem 5rem 0.7rem 0.75rem;
-    width: 100% !important;
     height: auto;
-
-    &:focus {
-      border-color: $primary;
-      box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
-    }
   }
 
   .suscriptionButton {
     position: absolute;
     top: 0.3em;
     right: 0.3em;
-    background-color: $secondary;
-    border-color: $secondary;
+
     opacity: 0.7;
-    color: $white;
-
     &:hover,
-    &:focus {
-      background-color: $secondary !important;
-      border-color: $secondary !important;
-      color: $white;
-      opacity: 1;
-    }
-
+    &:focus,
     &:active {
-      background-color: $secondary-dark !important;
-      border-color: $secondary-dark !important;
-      color: $white;
       opacity: 1;
     }
 
@@ -63,9 +42,5 @@
     width: 100%;
     max-width: 600px;
     margin: auto;
-
-    a {
-      color: $secondary;
-    }
   }
 }

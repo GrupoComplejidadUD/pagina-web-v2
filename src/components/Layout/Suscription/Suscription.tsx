@@ -6,12 +6,11 @@ import styles from "./Suscription.module.scss";
 
 export default function Suscription() {
   return (
-    <Container fluid className={cn("py-5", styles.suscription)}>
-      <h4 className="suscription-title">Suscríbete a Nuestro Boletín</h4>
+    <Container fluid className={cn("py-5 bg-dark", styles.suscription)}>
+      <h4 className={styles.suscriptionTitle}>Suscríbete a Nuestro Boletín</h4>
       <Form
         className={styles.suscriptionFrom}
         onSubmit={(ev) => ev.preventDefault()}
-        inline
       >
         <Form.Control
           className={styles.suscriptionInput}
@@ -23,7 +22,12 @@ export default function Suscription() {
           minLength={7}
           required
         />
-        <Button className={styles.suscriptionButton} type="submit" disabled>
+        <Button
+          variant="secondary"
+          className={styles.suscriptionButton}
+          type="submit"
+          disabled
+        >
           Enviar
         </Button>
       </Form>
@@ -31,8 +35,10 @@ export default function Suscription() {
         <small>
           Te estás suscribiendo para recibir nuestros boletines y novedades
           sobre productos. Al hacerlo estás aceptando nuestra{" "}
-          <a href="#">política de privacidad</a>, pero puedes darte de baja en
-          cualquier momento.
+          <a className="text-secondary" href="#">
+            política de privacidad
+          </a>
+          , pero puedes darte de baja en cualquier momento.
         </small>
       </p>
     </Container>
