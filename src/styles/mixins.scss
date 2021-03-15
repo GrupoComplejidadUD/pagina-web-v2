@@ -1,35 +1,23 @@
 @mixin media-sm {
-  @media (min-width: $sm) {
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
     @content;
   }
 }
 
 @mixin media-md {
-  @media (min-width: $md) {
+  @media (min-width: map-get($grid-breakpoints, "md")) {
     @content;
   }
 }
 
 @mixin media-lg {
-  @media (min-width: $lg) {
+  @media (min-width: map-get($grid-breakpoints, "lg")) {
     @content;
   }
 }
 
 @mixin media-xl {
-  @media (min-width: $xl) {
-    @content;
-  }
-}
-
-@mixin if-landscape {
-  @media (orientation: landscape) {
-    @content;
-  }
-}
-
-@mixin if-portrait {
-  @media (orientation: portrait) {
+  @media (min-width: map-get($grid-breakpoints, "xl")) {
     @content;
   }
 }
