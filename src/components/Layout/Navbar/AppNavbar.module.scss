@@ -1,5 +1,9 @@
-@import "variables";
-@import "mixins";
+// Local Variables
+$brand-height: 54px;
+$brand-font-size: 24px;
+$brand-height-index: 84px;
+$brand-font-size-index: 36px;
+// $navbar-gradiant-index: linear-gradient(#000c, #0000);
 
 .navbar {
   font-family: $font-titles;
@@ -44,7 +48,7 @@
     // Links
     .navDropdown > a,
     .navLink {
-      font-size: $font-size;
+      font-size: 1rem;
       color: $primary !important;
       @include transition(font-size);
 
