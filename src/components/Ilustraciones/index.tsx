@@ -3,7 +3,7 @@ import cn from "classnames";
 import ilustraciones from "./data.json";
 
 import Link from "next/link";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 
 import styles from "./styles.module.scss";
 
@@ -19,11 +19,13 @@ export default function Ilustraciones() {
               lg={5}
               className={cn("py-3", { "order-md-2": indx % 2 == 0 })}
             >
-              <div className={styles.ilustracionInfo}>
+              <div className={cn({ "text-md-right": indx % 2 != 0 })}>
                 <h2>{il.title}</h2>
-                <p>{il.content}</p>
+                <p className="py-3">{il.content}</p>
                 <Link href={il.path}>
-                  <a className={cn("btn", styles.btnSec)}>Ver Más</a>
+                  <Button variant="secondary" as="a">
+                    Ver Más
+                  </Button>
                 </Link>
               </div>
             </Col>

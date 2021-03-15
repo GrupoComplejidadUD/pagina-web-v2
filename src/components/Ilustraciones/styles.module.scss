@@ -1,6 +1,3 @@
-@import "variables";
-@import "mixins";
-
 .ilustraciones {
   background: $gradiant;
 }
@@ -20,28 +17,5 @@
   @include media-md {
     text-align: left;
     padding: 60px 0;
-
-    &:nth-child(even) .ilustracionInfo {
-      text-align: right;
-    }
-  }
-}
-
-.ilustracionInfo p {
-  margin: 1em 0;
-}
-
-.btnSec {
-  padding: 10px;
-  border-radius: 10px;
-  width: 100px;
-  margin: 0;
-
-  background-color: $secondary;
-  color: $white;
-
-  &:hover {
-    background-color: $secondary-dark;
-    color: $white;
   }
 }

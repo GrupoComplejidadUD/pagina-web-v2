@@ -1,83 +1,66 @@
-@import "variables";
-@import "mixins";
-
 .cover {
   position: relative;
   font-family: $font-titles;
-}
+  line-height: 1.3;
 
-.coverImg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.coverContent {
-  position: relative;
-  background: linear-gradient(#000 0%, #0005 30%, #0005 100%);
-  color: $white;
-  padding: 120px 1em 1em;
-
-  display: flex;
-  align-items: center;
-
-  // Mobile Landscape (Aprox)
-  @media (max-height: 360px) {
-    height: auto;
+  .coverImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  height: 100vh;
+  .coverContent {
+    position: relative;
+    background: linear-gradient(#000 0%, #0005 30%, #0005 100%);
+    color: $white;
 
-  // Tablet Landscape (Aprox)
-  @include media-md {
-    @media (max-height: 450px) {
+    padding: 120px 1em 1em;
+    display: flex;
+    align-items: center;
+
+    // Mobile Landscape (Aprox)
+    @media (max-height: 360px) {
       height: auto;
     }
-
     height: 100vh;
-  }
-}
 
-.coverHeader {
-  text-align: center;
-
-  @include media-sm {
-    font-size: 1.2rem;
-  }
-
-  @include media-md {
-    width: 60%;
-    text-align: left;
-    font-size: 1.6rem;
+    // Tablet Landscape (Aprox)
+    @include media-md {
+      @media (max-height: 450px) {
+        height: auto;
+      }
+      height: 100vh;
+    }
   }
 
-  @include media-lg {
-    font-size: 2.5vw;
-  }
-}
+  .coverHeader {
+    font-size: 1.4rem;
+    text-align: center;
 
-.coverHeaderTitle {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 2em;
-}
+    @include media-md {
+      width: 60%;
+      text-align: left;
+      font-size: 1.7rem;
+    }
 
-.coverHeaderText {
-  margin: 1.5em 0;
-}
-
-.btnsHeader {
-  display: flex;
-  flex-direction: column;
-
-  @include media-sm {
-    flex-direction: row;
-    justify-content: space-evenly;
+    @include media-lg {
+      font-size: 2rem;
+    }
   }
 
-  @include media-md {
-    justify-content: flex-start;
+  .btnsHeader {
+    display: flex;
+    flex-direction: column;
+
+    @include media-sm {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    @include media-md {
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -85,9 +68,9 @@
 %info-header-btn {
   font-weight: bold;
   text-transform: uppercase;
-  padding: 1em;
+  padding: 0.8rem;
   margin: 10px 0;
-  min-width: 200px;
+  min-width: 180px;
   border-radius: 10px;
 
   @include media-md {

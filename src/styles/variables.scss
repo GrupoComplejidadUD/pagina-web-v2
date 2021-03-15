@@ -1,4 +1,4 @@
-// Colors
+// Theme Colors
 $primary: #4a688c;
 $primary-light: #627d9d;
 $primary-lighten: #a4b6cb;
@@ -9,37 +9,51 @@ $secondary: #77b62b;
 $secondary-light: #8cd039;
 $secondary-dark: #679d25;
 
+// Other Colors
 $yellow: #fab442;
-$yellow-light: #fbc36a;
-$yellow-dark: #f9a824;
-
 $red: #f20d0d;
-$red-light: #f43434;
-$red-dark: #cb0b0b;
-
 $white: #fff;
 $black: #111;
 $muted: #ccc;
+
+$theme-colors: (
+  "dark": $primary-darken,
+);
 
 $gradiant: linear-gradient(#ffffff, #eef1f4);
 $shadow: 0px 4px 6px #2c4b7299;
 $not-shadow: 0px 0px 0px #0000;
 
 // Fonts
-$font-primary: "OpenSans", sans-serif;
-$font-titles: "Roboto", sans-serif;
-$font-body: "OpenSans", sans-serif;
+$font-body: "OpenSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-titles: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 
-$font-size: 16px;
+// Body Styles
+$body-bg: $white;
+$body-color: $primary-darken;
 
-// Responsive Layout
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
+// Navbar light Variables
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $primary-darken;
+$navbar-light-active-color: $primary-darken;
+$navbar-light-toggler-border-color: $primary;
 
-$brand-height: 54px;
-$brand-font-size: 24px;
-$brand-height-index: 84px;
-$brand-font-size-index: 36px;
-$navbar-gradiant-index: linear-gradient(#000c, #0000);
+// Dropdown variables
+$dropdown-bg: $primary;
+$dropdown-color: $body-color;
+
+$dropdown-link-color: $white;
+$dropdown-link-hover-color: $black;
+$dropdown-link-hover-bg: $primary-lighten;
+
+$dropdown-link-active-color: $primary-darken;
+$dropdown-link-active-bg: $white;
+
+// Bootstrap Required
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";

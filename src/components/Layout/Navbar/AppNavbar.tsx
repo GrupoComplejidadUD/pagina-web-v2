@@ -52,7 +52,7 @@ export default function AppNavbar() {
                   title={item.label}
                   id={item.label}
                   className={cn(styles.navDropdown, {
-                    [styles.navDropdownActive]: item.subMenu.some((si) =>
+                    [styles.active]: item.subMenu.some((si) =>
                       isCurrent(si.path!)
                     ),
                   })}
@@ -62,9 +62,7 @@ export default function AppNavbar() {
                       <NavDropdown.Item
                         href={subItem.path}
                         active={isCurrent(subItem.path!)}
-                        className={cn(styles.navLink, {
-                          [styles.navLinkActive]: isCurrent(subItem.path!),
-                        })}
+                        className={styles.navLink}
                       >
                         {subItem.label}
                       </NavDropdown.Item>
@@ -80,7 +78,7 @@ export default function AppNavbar() {
                       href={item.path!}
                       active={isCurrent(item.path!)}
                       className={cn(styles.navLink, {
-                        [styles.navLinkActive]: isCurrent(item.path!),
+                        [styles.active]: isCurrent(item.path!),
                       })}
                     >
                       {item.label}

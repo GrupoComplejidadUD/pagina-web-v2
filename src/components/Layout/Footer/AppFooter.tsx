@@ -18,7 +18,7 @@ import styles from "./AppFooter.module.scss";
 const footerMenu = footer as Menu;
 export default function AppFooter() {
   return (
-    <footer className={styles.footer}>
+    <footer className={cn("bg-primary", styles.footer)}>
       <Container fluid="md">
         <Row className="text-center">
           {footerMenu.map((item) => (
