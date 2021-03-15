@@ -16,6 +16,10 @@ $white: #fff;
 $black: #111;
 $muted: #ccc;
 
+$theme-colors: (
+  "dark": $primary-darken,
+);
+
 $gradiant: linear-gradient(#ffffff, #eef1f4);
 $shadow: 0px 4px 6px #2c4b7299;
 $not-shadow: 0px 0px 0px #0000;
