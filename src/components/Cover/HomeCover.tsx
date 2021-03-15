@@ -18,8 +18,10 @@ export default function HomeCover() {
       <div className={styles.coverContent}>
         <Container>
           <div className={styles.coverHeader}>
-            <h1 className={styles.coverHeaderTitle}>{name}</h1>
-            <p className={styles.coverHeaderText}>
+            <h1>
+              <strong>{name.toUpperCase()}</strong>
+            </h1>
+            <p className="my-4">
               Somos un Grupo de Investigación de la Universidad Distrital que
               nos interesamos por ahondar en el estudio de las Ciencias de la
               Complejidad.
