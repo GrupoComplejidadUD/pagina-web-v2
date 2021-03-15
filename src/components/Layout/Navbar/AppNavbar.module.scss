@@ -1,9 +1,12 @@
 // Local Variables
 $brand-height: 54px;
 $brand-font-size: 24px;
-$brand-height-index: 84px;
-$brand-font-size-index: 36px;
-// $navbar-gradiant-index: linear-gradient(#000c, #0000);
+$link-font-size: 1rem;
+
+$brand-height-cover: 84px;
+$brand-font-size-cover: 36px;
+$link-font-size-cover: 1.125em;
+// $navbar-gradiant-cover: linear-gradient(#000c, #0000);
 
 .navbar {
   font-family: $font-titles;
@@ -27,76 +30,36 @@ $brand-font-size-index: 36px;
       color: $primary !important;
       font-size: $brand-font-size;
       font-weight: bold;
-
       @include transition(font-size, color);
     }
   }
 
   // Toggler Button
   .toggler {
-    color: $primary !important;
-    border-color: $primary !important;
     font-size: $brand-font-size;
-
     @include transition(border-color, color, font-size);
   }
 
-  // List of Items
   .nav {
     text-align: center;
+    .navDropdown > div {
+      text-align: center;
+      @include media-lg {
+        text-align: left;
+      }
+    }
 
     // Links
     .navDropdown > a,
     .navLink {
-      font-size: 1rem;
-      color: $primary !important;
+      font-size: $link-font-size;
       @include transition(font-size);
-
-      &:hover {
-        color: $primary-dark !important;
-        text-decoration: underline;
-      }
     }
 
-    .navDropdown {
-      div {
-        background-color: $primary !important;
-        text-align: center;
-
-        @include media-lg {
-          text-align: left;
-        }
-
-        a {
-          color: $white !important;
-
-          &:hover {
-            color: $primary-dark !important;
-            text-decoration: none;
-          }
-
-          &:active {
-            color: $white !important;
-            background-color: $primary-dark !important;
-          }
-        }
-      }
-    }
-
-    .navLinkActive {
+    .active,
+    .active > a {
+      color: $primary-dark !important;
       font-weight: bold;
-    }
-
-    .navDropdownActive {
-      & > a {
-        font-weight: bold;
-      }
-
-      .navLinkActive {
-        font-weight: normal;
-        background-color: $white !important;
-        color: $primary !important;
-      }
     }
   }
 }
@@ -108,15 +71,14 @@ $brand-font-size-index: 36px;
   // Brand Section
   .navbarBrand {
     .brandLogo {
-      height: $brand-height-index;
+      height: $brand-height-cover;
     }
 
     .brandText {
       display: none;
-
       @include media-sm {
         display: block;
-        font-size: $brand-font-size-index;
+        font-size: $brand-font-size-cover;
         color: $white !important;
       }
     }
@@ -126,7 +88,7 @@ $brand-font-size-index: 36px;
   .toggler {
     border-color: $white !important;
     color: $white !important;
-    font-size: $brand-font-size-index;
+    font-size: $brand-font-size-cover;
   }
 
   // List of Items
@@ -143,12 +105,10 @@ $brand-font-size-index: 36px;
 
     .navDropdown > a,
     .navLink {
-      font-size: 1.125em;
-      color: $white !important;
-
+      font-size: $link-font-size-cover;
+      color: $gray-400 !important;
       &:hover {
         color: $white !important;
-        text-decoration: underline;
       }
     }
   }
