@@ -7,6 +7,9 @@
 // Scrollbar Styles
 @import "scrollbar";
 
+// Images Styles
+@import "images";
+
 // Personal Styles
 body {
   font-family: $font-body;
@@ -19,10 +22,4 @@ h4,
 h5,
 h6 {
   font-family: $font-titles;
-}
-
-// All images fluids
-img {
-  max-width: 100%;
-  height: auto;
 }

@@ -1,12 +1,12 @@
-import AppTitle from "@Components/Layout/AppTitle";
+import PageTitle from "@Components/Layout/PageTitle";
 import HomeCover from "@Components/Cover/HomeCover";
 import Ilustraciones from "@Components/Ilustraciones";
 import Aliados from "@Components/Aliados";
 
-export default function Home() {
+export default function Inicio() {
   return (
     <>
-      <AppTitle>Home</AppTitle>
+      <PageTitle title="Inicio" />
       <HomeCover />
       <Ilustraciones />
       <Aliados />

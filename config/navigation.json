@@ -1,15 +1,15 @@
 {
   "home": {
-    "primary": "#",
+    "primary": "/conocenos",
     "secondary": "random"
   },
   "navbar": [
     {
       "label": "Conócenos",
       "subMenu": [
-        { "label": "Misión y Visión", "path": "#" },
-        { "label": "Historia", "path": "#" },
-        { "label": "Objetivos", "path": "#" }
+        { "label": "Misión y Visión", "path": "/conocenos" },
+        { "label": "Objetivos", "path": "/objetivos" },
+        { "label": "Historia", "path": "/historia" }
       ]
     },
     {
@@ -40,10 +40,10 @@
     {
       "label": "Conócenos",
       "subMenu": [
-        { "label": "Mision", "path": "#" },
-        { "label": "Vision", "path": "#" },
-        { "label": "Historia", "path": "#" },
-        { "label": "Objetivos", "path": "#" }
+        { "label": "Mision", "path": "/conocenos" },
+        { "label": "Vision", "path": "/conocenos" },
+        { "label": "Objetivos", "path": "/objetivos" },
+        { "label": "Historia", "path": "/historia" }
       ]
     },
     {
