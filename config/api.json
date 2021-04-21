@@ -1,27 +1,3 @@
 {
-  "mision": {
-    "endpoint": "informacion-general",
-    "unique": true,
-    "key": "mision"
-  },
-  "vision": {
-    "endpoint": "informacion-general",
-    "unique": true,
-    "key": "vision"
-  },
-  "objetivos": {
-    "endpoint": "informacion-general",
-    "unique": true,
-    "key": "objetivos"
-  },
-  "historia": {
-    "endpoint": "informacion-general",
-    "unique": true,
-    "key": "historia"
-  },
-  "logros": {
-    "endpoint": "informacion-general",
-    "unique": true,
-    "key": "logros"
-  }
+  "general": "informacion-general"
 }

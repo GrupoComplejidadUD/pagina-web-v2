@@ -1,4 +1,4 @@
-import { mision, vision } from "@Config/api.json";
+import { general } from "@Config/api.json";
 import { getData } from "@Utils/api";
 
 import Page from "@Components/Layout/Page";
@@ -22,27 +22,11 @@ export default function About({ mision, vision }: AboutProps) {
 }
 
 export async function getStaticProps() {
-  const misionEndPoint = mision.endpoint;
-  const visionEndPoint = vision.endpoint;
-
-  let misionContent = "";
-  let visionContent = "";
-  if (misionEndPoint === visionEndPoint) {
-    const data = await getData(misionEndPoint);
-    misionContent = data[mision.key];
-    visionContent = data[vision.key];
-  } else {
-    const misionData = await getData(misionEndPoint);
-    misionContent = misionData[mision.key];
-
-    const visionData = await getData(visionEndPoint);
-    visionContent = visionData[vision.key];
-  }
-
+  const { mision, vision } = await getData(general);
   return {
     props: {
-      mision: misionContent,
-      vision: visionContent,
+      mision,
+      vision,
     },
   };
 }
