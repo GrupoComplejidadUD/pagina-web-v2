@@ -1,0 +1,22 @@
+// All images fluids
+.image,
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Align of Images
+.image-style-align-center {
+  display: flex;
+  justify-content: center;
+}
+
+.image-style-align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-style-align-left {
+  display: flex;
+  justify-content: flex-start;
+}
