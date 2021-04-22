@@ -15,7 +15,7 @@
     {
       "label": "Investigación",
       "subMenu": [
-        { "label": "Investigadores", "path": "#" },
+        { "label": "Investigadores", "path": "/investigadores" },
         {
           "label": "Lineas de Investigación",
           "path": "/lineas-investigacion"
@@ -49,7 +49,7 @@
     {
       "label": "Investigación",
       "subMenu": [
-        { "label": "Investigadores", "path": "#" },
+        { "label": "Investigadores", "path": "/investigadores" },
         {
           "label": "Lineas de Investigación",
           "path": "/lineas-investigacion"

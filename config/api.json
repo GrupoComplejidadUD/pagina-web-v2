@@ -1,4 +1,5 @@
 {
   "general": "informacion-general",
-  "lineasInvestigacion": "lineas"
+  "lineasInvestigacion": "lineas",
+  "miembros": "investigadores?vinculacion=Miembro&activo=true"
 }
