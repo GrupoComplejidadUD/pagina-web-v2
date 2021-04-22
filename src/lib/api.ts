@@ -1,4 +1,4 @@
-const { API_URL = "localhost:1337" } = process.env;
+const API_URL = process.env.API_URL || "http://localhost:1337";
 
 export async function getApiData(endpoint: string) {
   try {
