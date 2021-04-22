@@ -14,8 +14,10 @@ import styles from "./AppNavbar.module.scss";
 const navbarMenu = navbar as Menu;
 export default function AppNavbar() {
   const isTop = useScroll();
-  const { pathname } = useRouter();
-  const isCurrent = (path: string) => pathname === path;
+  const { asPath } = useRouter();
+
+  const isCurrent = (path: string) => asPath === path;
+  const isSubpageOf = (path: string) => asPath.startsWith(path);
 
   return (
     <Navbar
@@ -52,8 +54,8 @@ export default function AppNavbar() {
                   title={item.label}
                   id={item.label}
                   className={cn(styles.navDropdown, {
-                    [styles.active]: item.subMenu.some((si) =>
-                      isCurrent(si.path!)
+                    [styles.active]: item.subMenu.some((subItem) =>
+                      isSubpageOf(subItem.path!)
                     ),
                   })}
                 >
@@ -61,7 +63,7 @@ export default function AppNavbar() {
                     <Link key={subItem.label} href={subItem.path}>
                       <NavDropdown.Item
                         href={subItem.path}
-                        active={isCurrent(subItem.path!)}
+                        active={isSubpageOf(subItem.path!)}
                         className={styles.navLink}
                       >
                         {subItem.label}
