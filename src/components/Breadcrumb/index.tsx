@@ -10,9 +10,10 @@ function Breadcrumb() {
   const breadCrumbs = isNotFount
     ? [{ key: 404, label: "Page Not Found", href: asPath }]
     : pages.map((page, indx) => {
+        const pageParsed = page.split("-").join(" ");
         return {
           key: indx,
-          label: page.charAt(0).toUpperCase() + page.slice(1),
+          label: pageParsed.charAt(0).toUpperCase() + pageParsed.slice(1),
           href: `/${pages.slice(0, indx + 1).join("/")}`,
         };
       });
