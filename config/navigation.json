@@ -21,7 +21,7 @@
           "path": "/lineas-investigacion"
         },
         { "label": "Proyectos", "path": "/proyectos" },
-        { "label": "Publicaciones", "path": "#" }
+        { "label": "Publicaciones", "path": "/publicaciones" }
       ]
     },
     {
@@ -57,7 +57,7 @@
           "path": "/lineas-investigacion"
         },
         { "label": "Proyectos", "path": "/proyectos" },
-        { "label": "Publicaciones", "path": "#" }
+        { "label": "Publicaciones", "path": "/publicaciones" }
       ]
     },
     {
