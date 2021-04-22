@@ -1,5 +1,5 @@
 import { general } from "@Config/api.json";
-import { getData } from "@Utils/api";
+import { getApiData } from "@Lib/api";
 
 import Page from "@Components/Layout/Page";
 import ApiContent from "@Components/Layout/ApiContent";
@@ -20,7 +20,7 @@ export default function Historia({ historia, logros }: HistoriaProps) {
 }
 
 export async function getStaticProps() {
-  const { historia, logros } = await getData(general);
+  const { historia, logros } = await getApiData(general);
   return {
     props: {
       historia,

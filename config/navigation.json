@@ -18,7 +18,7 @@
         { "label": "Investigadores", "path": "#" },
         {
           "label": "Lineas de Investigación",
-          "path": "#"
+          "path": "/lineas-investigacion"
         },
         { "label": "Publicaciones", "path": "#" },
         { "label": "Productividad", "path": "#" }
@@ -52,7 +52,7 @@
         { "label": "Investigadores", "path": "#" },
         {
           "label": "Lineas de Investigación",
-          "path": "#"
+          "path": "/lineas-investigacion"
         },
         { "label": "Publicaciones", "path": "#" },
         { "label": "Productividad", "path": "#" }

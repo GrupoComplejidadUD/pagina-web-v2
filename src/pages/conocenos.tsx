@@ -1,5 +1,5 @@
 import { general } from "@Config/api.json";
-import { getData } from "@Utils/api";
+import { getApiData } from "@Lib/api";
 
 import Page from "@Components/Layout/Page";
 import ApiContent from "@Components/Layout/ApiContent";
@@ -22,7 +22,7 @@ export default function About({ mision, vision }: AboutProps) {
 }
 
 export async function getStaticProps() {
-  const { mision, vision } = await getData(general);
+  const { mision, vision } = await getApiData(general);
   return {
     props: {
       mision,
