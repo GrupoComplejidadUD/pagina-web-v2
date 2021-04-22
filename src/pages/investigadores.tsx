@@ -3,6 +3,7 @@ import { getApiData } from "@Lib/api";
 
 import Page from "@Components/Layout/Page";
 import InvestigadorDto, { toInvestigadorDto } from "@Dto/investigadorDto";
+import { Col, Row } from "react-bootstrap";
 
 type InvestigadoresProps = {
   profesores: InvestigadorDto[];
@@ -11,14 +12,12 @@ type InvestigadoresProps = {
 };
 
 function toInvestigadorInfo(
-  { nombre, apellido, contacto }: InvestigadorDto,
+  { nombre, apellido }: InvestigadorDto,
   indx: number
 ) {
   return (
     <li key={indx}>
       {nombre} {apellido}
-      {" - "}
-      {contacto ? <a href={`mailto:${contacto}`}>{contacto}</a> : ""}
     </li>
   );
 }
@@ -31,23 +30,44 @@ export default function Investigadores({
   return (
     <Page title="Investigadores">
       <h1>Investigadores</h1>
-
       {profesores.length > 0 && (
         <>
           <hr />
-          <h2>Profesores</h2>
-          <ul>{profesores.map(toInvestigadorInfo)}</ul>
+          <Row>
+            <Col md="8" lg="6">
+              <h2>Profesores</h2>
+              <ul>{profesores.map(toInvestigadorInfo)}</ul>
+            </Col>
+            <Col md="4" lg="6" className="text-center">
+              <img
+                className="w-100"
+                src="/images/miembros/miembros-complexud.png"
+                alt="ComplexUD"
+              />
+            </Col>
+          </Row>
         </>
       )}
 
       {(estudiantes.length > 0 || egresados.length > 0) && (
         <>
           <hr />
-          <h2>Estudiantes y Egresados</h2>
-          <ul>
-            {estudiantes.map(toInvestigadorInfo)}
-            {egresados.map(toInvestigadorInfo)}
-          </ul>
+          <Row>
+            <Col md="8" lg="6">
+              <h2>Estudiantes y Egresados</h2>
+              <ul>
+                {estudiantes.map(toInvestigadorInfo)}
+                {egresados.map(toInvestigadorInfo)}
+              </ul>
+            </Col>
+            <Col md="4" lg="6" className="text-center">
+              <img
+                className="w-100"
+                src="/images/miembros/cafe-complejo.png"
+                alt="ComplexUD"
+              />
+            </Col>
+          </Row>
         </>
       )}
     </Page>
