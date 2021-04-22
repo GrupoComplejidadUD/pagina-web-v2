@@ -27,7 +27,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      routes,
+      // Exclude Home Route
+      routes: routes.filter((route) => route !== "/"),
     },
   };
 }
