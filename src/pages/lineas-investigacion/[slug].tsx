@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 
 import { lineasInvestigacion } from "@Config/api.json";
-import { getData } from "@Utils/api";
+import { getApiData } from "@Lib/api";
 
 import Page from "@Components/Layout/Page";
 import ApiContent from "@Components/Layout/ApiContent";
@@ -24,7 +24,7 @@ export default function Linea({ name, content }: lineasProps) {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params!;
-  const data: LineasDto = await getData(`${lineasInvestigacion}/${slug}`);
+  const data: LineasDto = await getApiData(`${lineasInvestigacion}/${slug}`);
   const { nombre, descripcion } = data;
   return {
     props: {
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export async function getStaticPaths() {
-  const lineas: LineasDto[] = await getData(lineasInvestigacion);
+  const lineas: LineasDto[] = await getApiData(lineasInvestigacion);
   const paths = lineas.map(({ slug }) => ({
     params: { slug },
   }));

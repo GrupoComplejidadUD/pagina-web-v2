@@ -1,5 +1,5 @@
 import { lineasInvestigacion } from "@Config/api.json";
-import { getData } from "@Utils/api";
+import { getApiData } from "@Lib/api";
 import LineasDto from "@Dto/lineasDto";
 
 import Page from "@Components/Layout/Page";
@@ -32,7 +32,7 @@ export default function Lineas({ lineas }: LineasProps) {
 }
 
 export async function getStaticProps() {
-  const data: Array<LineasDto> = await getData(lineasInvestigacion);
+  const data: Array<LineasDto> = await getApiData(lineasInvestigacion);
   const lineas = data.map(({ nombre, slug }) => ({
     nombre,
     slug,

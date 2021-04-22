@@ -1,6 +1,6 @@
 const { API_URL = "localhost:1337" } = process.env;
 
-export async function getData(endpoint: string) {
+export async function getApiData(endpoint: string) {
   try {
     const res = await fetch(`${API_URL}/${endpoint}`);
     return res.json();
@@ -10,7 +10,7 @@ export async function getData(endpoint: string) {
   }
 }
 
-export async function sendData(endpoint: string, data: any) {
+export async function sendApiData(endpoint: string, data: any) {
   try {
     const res = await fetch(`${API_URL}/${endpoint}`, {
       method: "POST",

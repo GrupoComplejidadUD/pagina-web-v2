@@ -1,5 +1,5 @@
 import { general } from "@Config/api.json";
-import { getData } from "@Utils/api";
+import { getApiData } from "@Lib/api";
 
 import Page from "@Components/Layout/Page";
 import ApiContent from "@Components/Layout/ApiContent";
@@ -18,7 +18,7 @@ export default function Objetivos({ objetivos }: ObjetivosProps) {
 }
 
 export async function getStaticProps() {
-  const { objetivos } = await getData(general);
+  const { objetivos } = await getApiData(general);
   return {
     props: {
       objetivos,
