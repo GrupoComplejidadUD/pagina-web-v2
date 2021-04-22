@@ -2,10 +2,10 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 function Breadcrumb() {
-  const { pathname } = useRouter();
-  const isCurrent = (path: string) => pathname === path;
+  const { asPath } = useRouter();
+  const isCurrent = (path: string) => asPath === path;
 
-  const pages = pathname.split("/").slice(1);
+  const pages = asPath.split("/").slice(1);
   const breadCrumbs = pages.map((page, indx) => {
     return {
       key: indx,
@@ -44,27 +44,3 @@ function Breadcrumb() {
 }
 
 export default Breadcrumb;
-
-/**
- * 
- * @param param0 mixin breadcrumb()
-  - let breadCrumb = []
-  - if(is_archive() || is_home2()) breadCrumb = page.base.split('/').slice(0, -1)
-  - if(is_post() || is_page()) breadCrumb = page.path.split('/').slice(0, -1)
-
-  nav
-    ol.breadcrumb
-      li.breadcrumb-item
-        a(href=url_for('/'))= 'Inicio'
-
-      - let currentPath = ''
-      each localPath in breadCrumb
-        - currentPath += localPath + '/'
-        - pageTitle = localPath.charAt(0).toUpperCase() + localPath.slice(1);
-        if is_current(currentPath, true)
-          li.breadcrumb-item.active= pageTitle
-        else
-          li.breadcrumb-item
-            a(href=url_for(currentPath))= pageTitle
-
- */
