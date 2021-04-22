@@ -2,5 +2,6 @@
   "general": "informacion-general",
   "lineasInvestigacion": "lineas",
   "miembros": "investigadores?vinculacion=Miembro&activo=true",
-  "proyectos": "proyectos"
+  "proyectos": "proyectos",
+  "publicaciones": "publicaciones"
 }
