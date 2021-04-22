@@ -3,5 +3,6 @@
   "lineasInvestigacion": "lineas",
   "miembros": "investigadores?vinculacion=Miembro&activo=true",
   "proyectos": "proyectos",
-  "publicaciones": "publicaciones"
+  "publicaciones": "publicaciones",
+  "seminarios": "eventos?tipo=Seminario"
 }
