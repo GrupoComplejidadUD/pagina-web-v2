@@ -1,6 +1,6 @@
 import { lineasInvestigacion } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
-import LineasDto from "@Dto/lineasDto";
+import LineasDto, { toLineasDto } from "@Dto/lineasDto";
 
 import Page from "@Components/Layout/Page";
 import Link from "next/link";
@@ -33,10 +33,7 @@ export default function Lineas({ lineas }: LineasProps) {
 
 export async function getStaticProps() {
   const data: Array<LineasDto> = await getApiData(lineasInvestigacion);
-  const lineas = data.map(({ nombre, slug }) => ({
-    nombre,
-    slug,
-  }));
+  const lineas = data.map(toLineasDto);
 
   return {
     props: {
