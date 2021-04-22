@@ -25,10 +25,14 @@ export async function getStaticProps() {
   const pagesDirectory = path.join(process.cwd(), "src/pages");
   const routes = await getFilesPaths(pagesDirectory);
 
+  // Exclude Home Route and 404
+  const filteredRoutes = routes.filter(
+    (route) => !["/", "/404"].includes(route)
+  );
+
   return {
     props: {
-      // Exclude Home Route
-      routes: routes.filter((route) => route !== "/"),
+      routes: filteredRoutes,
     },
   };
 }
