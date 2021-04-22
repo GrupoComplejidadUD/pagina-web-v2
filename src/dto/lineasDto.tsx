@@ -3,3 +3,8 @@ export default interface LineasDto {
   slug: string;
   descripcion: string;
 }
+
+export function toLineasDto(data: Partial<LineasDto>): LineasDto {
+  const { nombre = "", slug = "", descripcion = "" } = data;
+  return { nombre, slug, descripcion };
+}
