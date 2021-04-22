@@ -24,7 +24,9 @@ export default function Linea({ name, content }: lineasProps) {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params!;
-  const data: LineasDto = await getApiData(`${lineasInvestigacion}/${slug}`);
+  const data: LineasDto = (
+    await getApiData(`${lineasInvestigacion}?slug=${slug}`)
+  )[0];
   const { nombre, descripcion } = data;
   return {
     props: {
