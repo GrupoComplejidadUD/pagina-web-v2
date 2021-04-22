@@ -6,7 +6,7 @@ import styles from "./Suscription.module.scss";
 
 export default function Suscription() {
   return (
-    <Container fluid className={cn("py-5 bg-dark", styles.suscription)}>
+    <Container fluid className={cn("py-4 bg-dark", styles.suscription)}>
       <h4 className={styles.suscriptionTitle}>Suscríbete a Nuestro Boletín</h4>
       <Form
         className={styles.suscriptionFrom}
