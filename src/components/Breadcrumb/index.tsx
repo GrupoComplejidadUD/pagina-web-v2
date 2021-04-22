@@ -2,17 +2,20 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 function Breadcrumb() {
-  const { asPath } = useRouter();
+  const { pathname, asPath } = useRouter();
   const isCurrent = (path: string) => asPath === path;
+  const isNotFount = pathname === "/404";
 
   const pages = asPath.split("/").slice(1);
-  const breadCrumbs = pages.map((page, indx) => {
-    return {
-      key: indx,
-      label: page.charAt(0).toUpperCase() + page.slice(1),
-      href: `/${pages.slice(0, indx + 1).join("/")}`,
-    };
-  });
+  const breadCrumbs = isNotFount
+    ? [{ key: 404, label: "Page Not Found", href: asPath }]
+    : pages.map((page, indx) => {
+        return {
+          key: indx,
+          label: page.charAt(0).toUpperCase() + page.slice(1),
+          href: `/${pages.slice(0, indx + 1).join("/")}`,
+        };
+      });
 
   return (
     <nav>
