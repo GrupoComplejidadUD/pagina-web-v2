@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import cn from "classnames";
 import { name } from "@Config/info.json";
 import { home } from "@Config/navigation.json";
@@ -7,7 +8,21 @@ import { Container } from "react-bootstrap";
 
 import styles from "./HomeCover.module.scss";
 
-export default function HomeCover() {
+type CoverProps = {
+  randomRoutes?: string[];
+};
+
+export default function HomeCover({ randomRoutes = [] }: CoverProps) {
+  const router = useRouter();
+
+  const handleRandom = () => {
+    if (randomRoutes.length > 0) {
+      const randomIndex = Math.floor(Math.random() * randomRoutes.length);
+      const newRoute = randomRoutes[randomIndex];
+      router.push(newRoute);
+    }
+  };
+
   return (
     <section className={styles.cover}>
       <img
@@ -30,7 +45,12 @@ export default function HomeCover() {
               <Link href={home.primary}>
                 <a className={cn("btn", styles.btnCta)}>Conócenos</a>
               </Link>
-              <button className={cn("btn", styles.btnGhost)}>Explora</button>
+              <button
+                className={cn("btn", styles.btnGhost)}
+                onClick={handleRandom}
+              >
+                Explora
+              </button>
             </div>
           </div>
         </Container>
