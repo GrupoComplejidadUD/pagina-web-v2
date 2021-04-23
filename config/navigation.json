@@ -28,7 +28,7 @@
       "label": "Eventos",
       "subMenu": [
         { "label": "Seminarios", "path": "/seminarios" },
-        { "label": "Conferencias", "path": "#" },
+        { "label": "Conferencias", "path": "/conferencias" },
         { "label": "Congresos", "path": "#" },
         { "label": "Sustentaciones", "path": "#" }
       ]
@@ -64,7 +64,7 @@
       "label": "Eventos",
       "subMenu": [
         { "label": "Seminarios", "path": "/seminarios" },
-        { "label": "Conferencias", "path": "#" },
+        { "label": "Conferencias", "path": "/conferencias" },
         { "label": "Congresos", "path": "#" },
         { "label": "Sustentaciones", "path": "#" }
       ]
