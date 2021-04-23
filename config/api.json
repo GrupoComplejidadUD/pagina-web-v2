@@ -4,5 +4,6 @@
   "miembros": "investigadores?vinculacion=Miembro&activo=true",
   "proyectos": "proyectos",
   "publicaciones": "publicaciones",
-  "seminarios": "eventos?tipo=Seminario"
+  "seminarios": "eventos?tipo=Seminario",
+  "conferencias": "eventos?tipo=Conferencia"
 }
