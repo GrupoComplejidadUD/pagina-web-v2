@@ -1,6 +1,7 @@
 import LineasDto from "./lineasDto";
 import InvestigadorDto from "./investigadorDto";
 import PublicacionDto from "./PublicacionDto";
+import SeoDto from "./SeoDto";
 
 export default interface ProyectoDto {
   slug: string;
@@ -14,6 +15,9 @@ export default interface ProyectoDto {
   estado: "Iniciado" | "Finalizado" | "Pausado" | "Cancelado";
   fecha_inicio: string | Date;
   fecha_final?: string | Date;
+
+  // Seo Data
+  seo: SeoDto;
 
   // Relations
   lineas_de_investigacion?: LineasDto[];

@@ -1,5 +1,6 @@
 import EventoDto from "./EventoDto";
 import PublicidadDto from "./PublicidadDto";
+import SeoDto from "./SeoDto";
 
 export default interface CongresoDto {
   slug: string;
@@ -8,6 +9,9 @@ export default interface CongresoDto {
   fecha_inicio: string | Date;
   fecha_final: string | Date;
   publicidad: PublicidadDto;
+
+  // Seo Data
+  seo: SeoDto;
 
   // Relations
   charlas: EventoDto[];

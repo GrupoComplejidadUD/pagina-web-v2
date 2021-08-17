@@ -3,6 +3,7 @@ import InvestigadorDto from "./investigadorDto";
 import MediaDto from "./MediaDto";
 import ProyectoDto from "./ProyectoDto";
 import PublicidadDto from "./PublicidadDto";
+import SeoDto from "./SeoDto";
 
 export default interface EventoDto {
   slug: string;
@@ -18,6 +19,9 @@ export default interface EventoDto {
   // Post - Evento
   grabacion?: any;
   fotos?: MediaDto[];
+
+  // Seo Data
+  seo: SeoDto;
 
   // Relations
   ponentes?: InvestigadorDto[];

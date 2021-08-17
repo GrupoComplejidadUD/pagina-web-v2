@@ -1,5 +1,6 @@
 import ProyectoDto from "./ProyectoDto";
 import InvestigadorDto from "./investigadorDto";
+import SeoDto from "./SeoDto";
 
 export default interface PublicacionDto {
   slug: string;
@@ -10,6 +11,9 @@ export default interface PublicacionDto {
   abstract: string;
   url_publicacion: string;
   url_repositorio?: string;
+
+  // Seo Data
+  seo: SeoDto;
 
   // Relations
   proyecto?: ProyectoDto;
