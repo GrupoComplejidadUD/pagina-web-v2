@@ -2,6 +2,7 @@ import LineasDto from "./lineasDto";
 import InvestigadorDto from "./investigadorDto";
 import PublicacionDto from "./PublicacionDto";
 import SeoDto from "./SeoDto";
+import EventoDto from "./EventoDto";
 
 export default interface ProyectoDto {
   slug: string;
@@ -24,4 +25,5 @@ export default interface ProyectoDto {
   directores?: InvestigadorDto[];
   integrantes?: InvestigadorDto[];
   publicaciones?: PublicacionDto[];
+  sustentacion?: EventoDto;
 }
