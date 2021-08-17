@@ -2,7 +2,7 @@ import { miembros } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
 
 import Page from "@Components/Layout/Page";
-import InvestigadorDto, { toInvestigadorDto } from "@Dto/investigadorDto";
+import InvestigadorDto from "@Dto/investigadorDto";
 import { Col, Row } from "react-bootstrap";
 
 type InvestigadoresProps = {
@@ -41,7 +41,7 @@ export default function Investigadores({
             <Col md="4" lg="6" className="text-center">
               <img
                 className="w-100"
-                src="/images/miembros/miembros-complexud.png"
+                src="/images/miembros/miembros-complexud.jpg"
                 alt="ComplexUD"
               />
             </Col>
@@ -75,11 +75,12 @@ export default function Investigadores({
 }
 
 export async function getStaticProps() {
-  const data: InvestigadorDto[] = await getApiData(miembros);
-  const investigadores = data.map(toInvestigadorDto);
+  const investigadores: InvestigadorDto[] = await getApiData(miembros);
 
-  const isCat = (cat: string) => ({ categoria }: InvestigadorDto) =>
-    categoria === cat;
+  const isCat =
+    (cat: string) =>
+    ({ categoria }: InvestigadorDto) =>
+      categoria === cat;
 
   const profesores = investigadores.filter(isCat("Profesor"));
   const estudiantes = investigadores.filter(isCat("Estudiante"));

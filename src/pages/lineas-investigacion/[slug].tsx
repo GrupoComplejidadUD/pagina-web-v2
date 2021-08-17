@@ -8,30 +8,26 @@ import ApiContent from "@Components/Layout/ApiContent";
 import LineasDto from "@Dto/lineasDto";
 
 type lineasProps = {
-  name: string;
-  content: string;
+  linea: LineasDto;
 };
 
-export default function Linea({ name, content }: lineasProps) {
+export default function Linea({ linea: { nombre, descripcion } }: lineasProps) {
   return (
-    <Page title={name}>
-      <h1>{name}</h1>
+    <Page title={nombre}>
+      <h1>{nombre}</h1>
       <hr />
-      <ApiContent content={content} />
+      <ApiContent content={descripcion} />
     </Page>
   );
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params!;
-  const data: LineasDto = (
-    await getApiData(`${lineasInvestigacion}?slug=${slug}`)
-  )[0];
-  const { nombre, descripcion } = data;
+  const data: LineasDto = await getApiData(`${lineasInvestigacion}/${slug}`);
+
   return {
     props: {
-      name: nombre,
-      content: descripcion,
+      linea: data,
     },
   };
 };

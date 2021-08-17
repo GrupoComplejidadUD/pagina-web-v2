@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 
 import { publicaciones } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
-import PublicacionDto, { toPublicacionDto } from "@Dto/PublicacionDto";
+import PublicacionDto from "@Dto/PublicacionDto";
 
 import Page from "@Components/Layout/Page";
 import ApiContent from "@Components/Layout/ApiContent";
@@ -25,13 +25,11 @@ export default function Publicacion({
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params!;
-  const data: PublicacionDto = (
-    await getApiData(`${publicaciones}?slug=${slug}`)
-  )[0];
-  const publicacion = toPublicacionDto(data);
+  const data: PublicacionDto = await getApiData(`${publicaciones}/${slug}`);
+
   return {
     props: {
-      publicacion,
+      publicacion: data,
     },
   };
 };
