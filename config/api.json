@@ -1,9 +1,12 @@
 {
   "general": "informacion-general",
-  "lineasInvestigacion": "lineas",
+  "investigadores": "investigadores",
   "miembros": "investigadores?vinculacion=Miembro&activo=true",
+  "lineasInvestigacion": "lineas",
   "proyectos": "proyectos",
   "publicaciones": "publicaciones",
+  "eventos": "eventos",
   "seminarios": "eventos?tipo=Seminario",
-  "conferencias": "eventos?tipo=Conferencia"
+  "conferencias": "eventos?tipo=Conferencia",
+  "sustentaciones": "eventos?tipo=Sustentacion"
 }
