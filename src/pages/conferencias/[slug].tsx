@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
-import { conferencias } from "@Config/api.json";
+import { eventos, conferencias } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
-import EventoDto, { toEventoDto } from "@Dto/EventoDto";
+import EventoDto from "@Dto/EventoDto";
 
 import Page from "@Components/Layout/Page";
 import ApiContent from "@Components/Layout/ApiContent";
@@ -11,11 +11,11 @@ type ConferenciaProps = {
 };
 
 export default function Conferencia({
-  conferencia: { titulo, descripcion },
+  conferencia: { nombre, descripcion },
 }: ConferenciaProps) {
   return (
-    <Page title={titulo}>
-      <h1>{titulo}</h1>
+    <Page title={nombre}>
+      <h1>{nombre}</h1>
       <hr />
       <ApiContent content={descripcion} />
     </Page>
@@ -24,18 +24,17 @@ export default function Conferencia({
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params!;
-  const data: EventoDto = (await getApiData(`${conferencias}&slug=${slug}`))[0];
-  const conferenciaData = toEventoDto(data);
+  const data: EventoDto = await getApiData(`${eventos}/${slug}`);
 
   return {
     props: {
-      conferencia: conferenciaData,
+      conferencia: data,
     },
   };
 };
 
 export async function getStaticPaths() {
-  const data: EventoDto[] = await getApiData(`${conferencias}`);
+  const data: EventoDto[] = await getApiData(conferencias);
   const paths = data.map(({ slug }) => ({
     params: { slug },
   }));

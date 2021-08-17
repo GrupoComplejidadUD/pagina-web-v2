@@ -1,18 +1,18 @@
 import { GetStaticProps } from "next";
-import { eventos, seminarios } from "@Config/api.json";
+import { eventos, sustentaciones } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
 import EventoDto from "@Dto/EventoDto";
 
 import Page from "@Components/Layout/Page";
 import ApiContent from "@Components/Layout/ApiContent";
 
-type SeminariosProps = {
-  seminario: EventoDto;
+type SustentacionProps = {
+  sustentacion: EventoDto;
 };
 
-export default function Seminario({
-  seminario: { nombre, descripcion },
-}: SeminariosProps) {
+export default function Sustentacion({
+  sustentacion: { nombre, descripcion },
+}: SustentacionProps) {
   return (
     <Page title={nombre}>
       <h1>{nombre}</h1>
@@ -28,13 +28,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      seminario: data,
+      sustentacion: data,
     },
   };
 };
 
 export async function getStaticPaths() {
-  const data: EventoDto[] = await getApiData(seminarios);
+  const data: EventoDto[] = await getApiData(sustentaciones);
   const paths = data.map(({ slug }) => ({
     params: { slug },
   }));
