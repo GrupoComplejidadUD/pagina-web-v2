@@ -1,51 +1,26 @@
-import MediaDto, { toMediaDto } from "./MediaDto";
+import CongresoDto from "./Congresos";
+import InvestigadorDto from "./investigadorDto";
+import MediaDto from "./MediaDto";
+import ProyectoDto from "./ProyectoDto";
+import PublicidadDto from "./PublicidadDto";
 
 export default interface EventoDto {
-  titulo: string;
-  descripcion: string;
   slug: string;
+  nombre: string;
+  descripcion: string;
   fecha: string | Date;
+  tipo: "Seminario" | "Conferencia" | "Charla" | "Sustentacion" | "Otro";
   ubicacion: string;
-  publicidad?: {
-    mensaje?: string;
-    poster?: MediaDto | null;
-  };
-}
 
-interface EventoServidorDto extends EventoDto {
-  info: {
-    fecha: string;
-    ubicacion: string;
-    grabacion: MediaDto | null;
-  };
-}
+  // Pre - Evento
+  publicidad?: PublicidadDto;
 
-export function toEventoDto(data: Partial<EventoServidorDto>): EventoDto {
-  const { titulo = "", descripcion = "", slug = "", publicidad, info } = data;
-  let mensaje = "";
-  let posterParsed = null;
-  if (publicidad) {
-    mensaje = publicidad.mensaje || "";
-    const { poster } = publicidad;
-    posterParsed = poster ? toMediaDto(poster) : poster;
-  }
+  // Post - Evento
+  grabacion?: any;
+  fotos?: MediaDto[];
 
-  let fecha = "";
-  let ubicacion = "";
-  if (info) {
-    fecha = info.fecha || "";
-    ubicacion = info.ubicacion || "";
-  }
-
-  return {
-    titulo,
-    descripcion,
-    slug,
-    fecha,
-    ubicacion,
-    publicidad: {
-      mensaje,
-      poster: posterParsed,
-    },
-  };
+  // Relations
+  ponentes?: InvestigadorDto[];
+  proyecto?: ProyectoDto;
+  congreso?: CongresoDto;
 }
