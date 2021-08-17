@@ -1,0 +1,38 @@
+.sponsors {
+  overflow: auto;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+
+  // Custom scrollbars
+  scrollbar-color: $primary-dark $primary-lighten;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+    background-color: $primary-lighten;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-dark;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $primary;
+  }
+}
+
+.sponsorInfo {
+  padding: 10px 1em;
+  flex-shrink: 0;
+
+  img {
+    height: 100px;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+}

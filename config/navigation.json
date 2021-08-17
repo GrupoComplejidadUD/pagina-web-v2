@@ -1,0 +1,73 @@
+{
+  "home": {
+    "primary": "/conocenos",
+    "secondary": "random"
+  },
+  "navbar": [
+    {
+      "label": "Conócenos",
+      "subMenu": [
+        { "label": "Misión y Visión", "path": "/conocenos" },
+        { "label": "Historia", "path": "/historia" },
+        { "label": "Objetivos", "path": "/objetivos" }
+      ]
+    },
+    {
+      "label": "Investigación",
+      "subMenu": [
+        { "label": "Investigadores", "path": "/investigadores" },
+        {
+          "label": "Lineas de Investigación",
+          "path": "/lineas-investigacion"
+        },
+        { "label": "Proyectos", "path": "/proyectos" },
+        { "label": "Publicaciones", "path": "/publicaciones" }
+      ]
+    },
+    {
+      "label": "Eventos",
+      "subMenu": [
+        { "label": "Congresos", "path": "#" },
+        { "label": "Seminarios", "path": "/seminarios" },
+        { "label": "Conferencias", "path": "/conferencias" },
+        { "label": "Sustentaciones", "path": "/sustentaciones" }
+      ]
+    },
+    {
+      "label": "Convocatorias",
+      "path": "/convocatorias"
+    }
+  ],
+  "footer": [
+    {
+      "label": "Conócenos",
+      "subMenu": [
+        { "label": "Mision", "path": "/conocenos" },
+        { "label": "Vision", "path": "/conocenos" },
+        { "label": "Historia", "path": "/historia" },
+        { "label": "Objetivos", "path": "/objetivos" }
+      ]
+    },
+    {
+      "label": "Investigación",
+      "subMenu": [
+        { "label": "Investigadores", "path": "/investigadores" },
+        {
+          "label": "Lineas de Investigación",
+          "path": "/lineas-investigacion"
+        },
+        { "label": "Proyectos", "path": "/proyectos" },
+        { "label": "Publicaciones", "path": "/publicaciones" }
+      ]
+    },
+    {
+      "label": "Eventos",
+      "subMenu": [
+        { "label": "Congresos", "path": "#" },
+        { "label": "Seminarios", "path": "/seminarios" },
+        { "label": "Conferencias", "path": "/conferencias" },
+        { "label": "Sustentaciones", "path": "/sustentaciones" }
+      ]
+    }
+  ]
+}

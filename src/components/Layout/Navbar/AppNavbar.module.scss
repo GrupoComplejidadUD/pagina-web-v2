@@ -1,0 +1,115 @@
+// Local Variables
+$brand-height: 54px;
+$brand-font-size: 24px;
+$link-font-size: 1rem;
+
+$brand-height-cover: 84px;
+$brand-font-size-cover: 36px;
+$link-font-size-cover: 1.125em;
+// $navbar-gradiant-cover: linear-gradient(#000c, #0000);
+
+.navbar {
+  font-family: $font-titles;
+  background: $white;
+  box-shadow: $shadow;
+  z-index: 10000;
+
+  // Brand Section
+  .navbarBrand {
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+
+    .brandLogo {
+      margin-right: 10px;
+      height: $brand-height;
+      @include transition(height);
+    }
+
+    .brandText {
+      color: $primary !important;
+      font-size: $brand-font-size;
+      font-weight: bold;
+      @include transition(font-size, color);
+    }
+  }
+
+  // Toggler Button
+  .toggler {
+    font-size: $brand-font-size;
+    @include transition(border-color, color, font-size);
+  }
+
+  .nav {
+    text-align: center;
+    .navDropdown > div {
+      text-align: center;
+      @include media-lg {
+        text-align: left;
+      }
+    }
+
+    // Links
+    .navDropdown > a,
+    .navLink {
+      font-size: $link-font-size;
+      @include transition(font-size);
+    }
+
+    .active,
+    .active > a {
+      color: $primary-dark !important;
+      font-weight: bold;
+    }
+  }
+}
+
+.coverNavbar {
+  box-shadow: $not-shadow;
+  background: transparent;
+
+  // Brand Section
+  .navbarBrand {
+    .brandLogo {
+      height: $brand-height-cover;
+    }
+
+    .brandText {
+      display: none;
+      @include media-sm {
+        display: block;
+        font-size: $brand-font-size-cover;
+        color: $white !important;
+      }
+    }
+  }
+
+  // Toggler Button
+  .toggler {
+    border-color: $white !important;
+    color: $white !important;
+    font-size: $brand-font-size-cover;
+  }
+
+  // List of Items
+  .nav {
+    background-color: rgba($primary-dark, 0.95) !important;
+    margin-top: 5px;
+    padding: 1em;
+
+    @include media-lg {
+      background-color: transparent !important;
+      margin-top: 0;
+      padding: 0;
+    }
+
+    .navDropdown > a,
+    .navLink {
+      font-size: $link-font-size-cover;
+      color: $gray-400 !important;
+      &:hover {
+        color: $white !important;
+      }
+    }
+  }
+}
