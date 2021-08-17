@@ -1,10 +1,14 @@
-export default interface LineasDto {
-  nombre: string;
-  slug: string;
-  descripcion: string;
-}
+import ProyectoDto from "./ProyectoDto";
+import SeoDto from "./SeoDto";
 
-export function toLineasDto(data: Partial<LineasDto>): LineasDto {
-  const { nombre = "", slug = "", descripcion = "" } = data;
-  return { nombre, slug, descripcion };
+export default interface LineasDto {
+  slug: string;
+  nombre: string;
+  descripcion: string;
+
+  // Seo Data
+  seo: SeoDto;
+
+  // Relations
+  proyectos?: ProyectoDto[];
 }

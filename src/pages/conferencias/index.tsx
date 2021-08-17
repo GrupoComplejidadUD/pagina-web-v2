@@ -1,6 +1,6 @@
 import { conferencias } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
-import EventoDto, { toEventoDto } from "@Dto/EventoDto";
+import EventoDto from "@Dto/EventoDto";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import Page from "@Components/Layout/Page";
 
 type ConferenciasProps = {
-  conferencias: Array<EventoDto>;
+  conferencias: EventoDto[];
 };
 
 export default function Conferencias({ conferencias }: ConferenciasProps) {
@@ -18,11 +18,11 @@ export default function Conferencias({ conferencias }: ConferenciasProps) {
       <h1>Conferencias</h1>
       <hr />
       <ul>
-        {conferencias.map(({ titulo, slug }) => (
+        {conferencias.map(({ slug, nombre }) => (
           <li key={slug}>
             <h5>
               <Link href={`${pathname}/${slug}`}>
-                <a href={`${pathname}/${slug}`}>{titulo}</a>
+                <a href={`${pathname}/${slug}`}>{nombre}</a>
               </Link>
             </h5>
           </li>
@@ -34,11 +34,10 @@ export default function Conferencias({ conferencias }: ConferenciasProps) {
 
 export async function getStaticProps() {
   const data: EventoDto[] = await getApiData(conferencias);
-  const conferenciasData = data.map(toEventoDto);
 
   return {
     props: {
-      conferencias: conferenciasData,
+      conferencias: data,
     },
   };
 }

@@ -1,6 +1,6 @@
 import { proyectos } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
-import ProyectoDto, { toProyectoDto } from "@Dto/ProyectoDto";
+import ProyectoDto from "@Dto/ProyectoDto";
 
 import Page from "@Components/Layout/Page";
 import Link from "next/link";
@@ -33,10 +33,10 @@ export default function Proyectos({ proyectos }: ProyectosProps) {
 
 export async function getStaticProps() {
   const data: ProyectoDto[] = await getApiData(proyectos);
-  const proyectosInv = data.map(toProyectoDto);
+
   return {
     props: {
-      proyectos: proyectosInv,
+      proyectos: data,
     },
   };
 }

@@ -8,8 +8,8 @@
       "label": "Conócenos",
       "subMenu": [
         { "label": "Misión y Visión", "path": "/conocenos" },
-        { "label": "Objetivos", "path": "/objetivos" },
-        { "label": "Historia", "path": "/historia" }
+        { "label": "Historia", "path": "/historia" },
+        { "label": "Objetivos", "path": "/objetivos" }
       ]
     },
     {
@@ -27,10 +27,10 @@
     {
       "label": "Eventos",
       "subMenu": [
+        { "label": "Congresos", "path": "#" },
         { "label": "Seminarios", "path": "/seminarios" },
         { "label": "Conferencias", "path": "/conferencias" },
-        { "label": "Congresos", "path": "#" },
-        { "label": "Sustentaciones", "path": "#" }
+        { "label": "Sustentaciones", "path": "/sustentaciones" }
       ]
     },
     {
@@ -44,8 +44,8 @@
       "subMenu": [
         { "label": "Mision", "path": "/conocenos" },
         { "label": "Vision", "path": "/conocenos" },
-        { "label": "Objetivos", "path": "/objetivos" },
-        { "label": "Historia", "path": "/historia" }
+        { "label": "Historia", "path": "/historia" },
+        { "label": "Objetivos", "path": "/objetivos" }
       ]
     },
     {
@@ -63,10 +63,10 @@
     {
       "label": "Eventos",
       "subMenu": [
+        { "label": "Congresos", "path": "#" },
         { "label": "Seminarios", "path": "/seminarios" },
         { "label": "Conferencias", "path": "/conferencias" },
-        { "label": "Congresos", "path": "#" },
-        { "label": "Sustentaciones", "path": "#" }
+        { "label": "Sustentaciones", "path": "/sustentaciones" }
       ]
     }
   ]

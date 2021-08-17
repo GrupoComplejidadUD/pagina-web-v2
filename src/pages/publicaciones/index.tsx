@@ -1,6 +1,6 @@
 import { publicaciones } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
-import PublicacionDto, { toPublicacionDto } from "@Dto/PublicacionDto";
+import PublicacionDto from "@Dto/PublicacionDto";
 
 import Page from "@Components/Layout/Page";
 import Link from "next/link";
@@ -33,10 +33,10 @@ export default function Publicaciones({ publicaciones }: PublicacionesProps) {
 
 export async function getStaticProps() {
   const data: PublicacionDto[] = await getApiData(publicaciones);
-  const publicacionesInv = data.map(toPublicacionDto);
+
   return {
     props: {
-      publicaciones: publicacionesInv,
+      publicaciones: data,
     },
   };
 }

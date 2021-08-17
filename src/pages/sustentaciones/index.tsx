@@ -1,23 +1,26 @@
-import { lineasInvestigacion } from "@Config/api.json";
+import { sustentaciones } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
-import LineasDto from "@Dto/lineasDto";
+import EventoDto from "@Dto/EventoDto";
 
-import Page from "@Components/Layout/Page";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-type LineasProps = {
-  lineas: Array<LineasDto>;
+import Page from "@Components/Layout/Page";
+
+type SustentacionesProps = {
+  sustentaciones: EventoDto[];
 };
 
-export default function Lineas({ lineas }: LineasProps) {
+export default function Sustentaciones({
+  sustentaciones,
+}: SustentacionesProps) {
   const { pathname } = useRouter();
   return (
-    <Page title="Lineas de Investigación">
-      <h1>Lineas de Investigación</h1>
+    <Page title="Sustentaciones">
+      <h1>Sustentaciones</h1>
       <hr />
       <ul>
-        {lineas.map(({ nombre, slug }) => (
+        {sustentaciones.map(({ slug, nombre }) => (
           <li key={slug}>
             <h5>
               <Link href={`${pathname}/${slug}`}>
@@ -32,11 +35,11 @@ export default function Lineas({ lineas }: LineasProps) {
 }
 
 export async function getStaticProps() {
-  const data: Array<LineasDto> = await getApiData(lineasInvestigacion);
+  const data: any[] = await getApiData(sustentaciones);
 
   return {
     props: {
-      lineas: data,
+      sustentaciones: data,
     },
   };
 }

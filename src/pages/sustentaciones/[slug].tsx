@@ -1,17 +1,18 @@
 import { GetStaticProps } from "next";
-
-import { lineasInvestigacion } from "@Config/api.json";
+import { eventos, sustentaciones } from "@Config/api.json";
 import { getApiData } from "@Lib/api";
+import EventoDto from "@Dto/EventoDto";
 
 import Page from "@Components/Layout/Page";
 import ApiContent from "@Components/Layout/ApiContent";
-import LineasDto from "@Dto/lineasDto";
 
-type lineasProps = {
-  linea: LineasDto;
+type SustentacionProps = {
+  sustentacion: EventoDto;
 };
 
-export default function Linea({ linea: { nombre, descripcion } }: lineasProps) {
+export default function Sustentacion({
+  sustentacion: { nombre, descripcion },
+}: SustentacionProps) {
   return (
     <Page title={nombre}>
       <h1>{nombre}</h1>
@@ -23,18 +24,18 @@ export default function Linea({ linea: { nombre, descripcion } }: lineasProps) {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params!;
-  const data: LineasDto = await getApiData(`${lineasInvestigacion}/${slug}`);
+  const data: EventoDto = await getApiData(`${eventos}/${slug}`);
 
   return {
     props: {
-      linea: data,
+      sustentacion: data,
     },
   };
 };
 
 export async function getStaticPaths() {
-  const lineas: LineasDto[] = await getApiData(lineasInvestigacion);
-  const paths = lineas.map(({ slug }) => ({
+  const data: EventoDto[] = await getApiData(sustentaciones);
+  const paths = data.map(({ slug }) => ({
     params: { slug },
   }));
 

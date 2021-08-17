@@ -1,35 +1,27 @@
+import LineasDto from "./lineasDto";
+import InvestigadorDto from "./investigadorDto";
+import PublicacionDto from "./PublicacionDto";
+import SeoDto from "./SeoDto";
+
 export default interface ProyectoDto {
-  titulo: string;
   slug: string;
+  titulo: string;
   descripcion: string;
   tipo:
     | "Investigación"
-    | "Tesis Pregrado"
-    | "Tesis Maestria"
-    | "Tesis Doctoral";
+    | "Tesis_Pregrado"
+    | "Tesis_Maestria"
+    | "Tesis_Doctoral";
   estado: "Iniciado" | "Finalizado" | "Pausado" | "Cancelado";
-  fechaInicio: string | Date;
-  fechaFinal?: string | Date;
-}
+  fecha_inicio: string | Date;
+  fecha_final?: string | Date;
 
-interface ProyectoDtoServer extends ProyectoDto {
-  fecha_inicio: string;
-  fecha_final?: string;
-}
+  // Seo Data
+  seo: SeoDto;
 
-export function toProyectoDto(data: Partial<ProyectoDtoServer>): ProyectoDto {
-  // Default Values
-  const {
-    titulo = "",
-    slug = "",
-    descripcion = "",
-    tipo = "Investigación",
-    estado = "Iniciado",
-    fecha_inicio = new Date().toISOString(),
-    fecha_final,
-  } = data;
-
-  const fechaInicio = fecha_inicio;
-  const fechaFinal = fecha_final;
-  return { titulo, slug, descripcion, tipo, estado, fechaInicio, fechaFinal };
+  // Relations
+  lineas_de_investigacion?: LineasDto[];
+  directores?: InvestigadorDto[];
+  integrantes?: InvestigadorDto[];
+  publicaciones?: PublicacionDto[];
 }
