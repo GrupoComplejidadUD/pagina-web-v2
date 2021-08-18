@@ -5,12 +5,14 @@ import cn from "classnames";
 import { Button, Container, Form } from "react-bootstrap";
 
 import styles from "./Suscription.module.scss";
+import SuscriptionModal from "./SuscriptionModal";
 
 const emailTest = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/i;
 export default function Suscription() {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [email, setEmail] = useState("");
   const [isValid, setIsValid] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleChangeEmail = ({
     target: { value },
@@ -24,7 +26,10 @@ export default function Suscription() {
     if (!isValid) return;
 
     await recaptchaRef.current?.executeAsync();
-    (ev.target as HTMLFormElement).submit();
+    setShowModal(true);
+
+    const form = ev.target as HTMLFormElement;
+    form.submit();
 
     setEmail("");
     setIsValid(false);
@@ -37,7 +42,7 @@ export default function Suscription() {
       <Form
         method="POST"
         action={process.env.NEXT_PUBLIC_SUSCRIPTION_ACTION}
-        target="_blank"
+        target="suscription-result"
         className={styles.suscriptionFrom}
         onSubmit={handleSubmit}
       >
@@ -70,6 +75,11 @@ export default function Suscription() {
           Enviar
         </Button>
       </Form>
+      <SuscriptionModal
+        targetName="suscription-result"
+        show={showModal}
+        onClose={() => setShowModal(false)}
+      />
       <p className={styles.suscriptionLegend}>
         <small>
           Te estás suscribiendo para recibir nuestros boletines y novedades
