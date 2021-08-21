@@ -5,6 +5,7 @@
   "lineasInvestigacion": "lineas",
   "proyectos": "proyectos",
   "publicaciones": "publicaciones",
+  "congresos": "congresos",
   "eventos": "eventos",
   "seminarios": "eventos?tipo=Seminario",
   "conferencias": "eventos?tipo=Conferencia",
