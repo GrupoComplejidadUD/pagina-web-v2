@@ -10,4 +10,10 @@ module.exports = {
       @import "mixins";
     `,
   },
+  rewrites: async () => [
+    {
+      source: "/admin/:path*",
+      destination: `${process.env.ADMIN_URL || ""}/admin/:path*`,
+    },
+  ],
 };
