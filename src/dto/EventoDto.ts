@@ -1,4 +1,4 @@
-import CongresoDto from "./Congresos";
+import CongresoDto from "./CongresoDto";
 import InvestigadorDto from "./investigadorDto";
 import MediaDto from "./MediaDto";
 import ProyectoDto from "./ProyectoDto";
