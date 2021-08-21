@@ -8,6 +8,8 @@ export default interface CongresoDto {
   descripcion?: string;
   fecha_inicio: string | Date;
   fecha_final: string | Date;
+
+  // Pre - Congreso
   publicidad: PublicidadDto;
 
   // Seo Data

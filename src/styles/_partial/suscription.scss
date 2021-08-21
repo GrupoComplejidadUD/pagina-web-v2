@@ -1,0 +1,15 @@
+.suscription-modal {
+  .modal-body {
+    position: relative;
+    padding: 0;
+    height: 300px;
+  }
+
+  @include media-sm {
+    max-width: initial;
+  }
+
+  @include media-lg {
+    max-width: 960px;
+  }
+}
